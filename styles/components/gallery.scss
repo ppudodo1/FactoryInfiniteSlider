@@ -1,0 +1,34 @@
+.gallery, .second-gallery {
+    overflow: hidden;
+    margin-bottom: 4px;
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 5px;
+      list-style: none;
+    }
+  
+    li {
+      height: $image-height;
+    }
+  
+    img {
+      height: 100%;
+      border-radius: 2px;
+    }
+  }
+  
+  .second-gallery {
+    transform: translateX(-100px);
+  }
+  
+  .img-hover {
+    transform: translateX(-2px);
+    @include transition(transform, 0.3s, ease);
+  }
+  
+  .img-hover-right {
+    transform: translateX(2px);
+    @include transition(transform, 0.3s, ease);
+  }
+  

@@ -1,0 +1,17 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+    button {
+      @include flex-center;
+      height: $button-size;
+      width: $button-size;
+      background-color: $background-color;
+      border: none;
+      border: 0.5px solid $primary-color;
+      border-radius: 5px;
+      @include hover-effect($secondary-color);
+    }
+  }
+  
