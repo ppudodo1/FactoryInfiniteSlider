@@ -4,9 +4,39 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  font-family: 'Source Sans Pro', sans-serif;
 
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 100px;
+}
+footer{
+  max-width: 940px;
+  background-color: #DDDDDD;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 100px;
+ 
+}
+.first-header-container{
+  background-color: #DDDDDD;
+  height: 100%;
+  width: 301px;
+  border-radius: 5px;
+}
+.second-header-container{
+  background-color: #DDDDDD;
+  height: 100%;
+  width: 621px;
+  border-radius: 5px;
+}
 .button-container {
   display: flex;
   flex-direction: column;
@@ -16,8 +46,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35px;
-  width: 35px;
+  height: 60px;
+  width: 60px;
   background-color: #ffffff;
   border: none;
   border: 0.5px solid #255282;
@@ -26,9 +56,12 @@ body {
 .button-container button:hover {
   border: 0.5px solid #A1A1A1;
 }
-
+.gallery{
+  width: 940px;
+}
 .gallery, .second-gallery {
   overflow: hidden;
+ 
   margin-bottom: 4px;
 }
 .gallery ul, .second-gallery ul {
@@ -38,15 +71,16 @@ body {
   list-style: none;
 }
 .gallery li, .second-gallery li {
-  height: 115px;
+  height: 202px;
 }
 .gallery img, .second-gallery img {
-  height: 100%;
-  border-radius: 2px;
+  height: 200px;
+  border-radius: 5px;
 }
 
 .second-gallery {
   transform: translateX(-100px);
+  width: 880px;
 }
 
 .img-hover {
@@ -60,7 +94,7 @@ body {
 }
 
 .big-container {
-  max-width: 940px;
+
   display: flex;
   gap: 1rem;
   margin-top: 2%;
@@ -75,7 +109,7 @@ body {
 .small-container {
   display: flex;
   flex-direction: column;
-  width: 562px;
+  max-width: 940px;
 }
 
 .second-container {
@@ -88,18 +122,18 @@ body {
 }
 
 .title {
-  font-size: 22px;
-  max-width: 220px;
+  font-size: 32px;
+  max-width: 300px;
   margin-top: 4px;
   margin-bottom: 4px;
   font-weight: bolder;
-  color: #255282;
+  color: #134880;
 }
 
 .description {
-  font-size: 12px;
-  max-width: 220px;
-  color: #706E6F;
+  font-size: 18px;
+  max-width: 300px;
+  color: #484A4C;
 }
 
 /*# sourceMappingURL=main.css.map */
