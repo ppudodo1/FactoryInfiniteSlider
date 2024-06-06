@@ -11,7 +11,7 @@
 .small-container {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 5px;
     width: $small-container-width;
 }
   
@@ -29,15 +29,17 @@
 .title {
     font-size: $title-font-size;
     max-width: 300px;
+    line-height: 37.5px;
     margin-top: 4px;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     font-weight: bolder;
     color: $primary-color;
 }
   
 .description {
     font-size: $description-font-size;
-    max-width: 300px;
+    max-width: 307px;
+    line-height: 26px;
     color: $text-color;
 }
   

@@ -48,7 +48,7 @@ footer {
 .button-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .button-container button {
   display: flex;
@@ -118,7 +118,7 @@ footer {
 .small-container {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 5px;
   width: 940px;
 }
 
@@ -138,15 +138,17 @@ footer {
 .title {
   font-size: 32px;
   max-width: 300px;
+  line-height: 37.5px;
   margin-top: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-weight: bolder;
   color: #134880;
 }
 
 .description {
   font-size: 18px;
-  max-width: 300px;
+  max-width: 307px;
+  line-height: 26px;
   color: #484A4C;
 }
 
