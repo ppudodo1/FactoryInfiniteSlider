@@ -1,10 +1,13 @@
+.gallery{
+  width: 940px;
+}
 .gallery, .bottom-gallery {
     overflow: hidden;
     margin-bottom: 4px;
     ul {
       display: flex;
       flex-wrap: nowrap;
-      gap: 5px;
+      gap: 10px;
       list-style: none;
     }
   
@@ -14,12 +17,13 @@
   
     img {
       height: 100%;
-      border-radius: 2px;
+      border-radius: 5px;
     }
   }
   
   .bottom-gallery {
     transform: translateX(-100px);
+    width: 880px;
   }
   
   .img-hover {

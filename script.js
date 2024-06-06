@@ -5,9 +5,9 @@ $(document).ready(() => {
     const nextGrey = './buttonImages/arrow-gray-left.png';
 
     const imagesArr = [
-        "./images/slider-image-1.jpg", "./images/slider-image-2.jpg", "./images/slider-image-3.jpg",
+        "./images/slider-image-1.jpg", "./images/slider-image-7.jpg", "./images/slider-image-3.jpg",
         "./images/slider-image-4.jpg", "./images/slider-image-5.jpg", "./images/slider-image-6.jpg",
-        "./images/slider-image-7.jpg", "./images/slider-image-8.jpg", "./images/slider-image-9.jpg"
+        "./images/slider-image-2.jpg", "./images/slider-image-8.jpg", "./images/slider-image-9.jpg"
     ];
     
     const mixedImagesArr = [
@@ -64,7 +64,7 @@ $(document).ready(() => {
             $newImage.hide().fadeIn(500);
 
             let currentTranslateX = $ul.data('translate-x') || 0;
-            let newTranslateX = currentTranslateX - (currentImageWidth+5);
+            let newTranslateX = currentTranslateX - (currentImageWidth+10);
             
             $ul.css({
                 'transform': `translateX(${newTranslateX}px)`,
@@ -91,7 +91,7 @@ $(document).ready(() => {
             $newImageBottom.hide().fadeIn(500);
 
             let currentTranslateX = $secondUl.data('translate-x') || 0;
-            let newTranslateX = currentTranslateX - (currentImageWidthBottom + 5);
+            let newTranslateX = currentTranslateX - (currentImageWidthBottom + 10);
 
             $secondUl.css({
                 'transform': `translateX(${newTranslateX}px)`,
@@ -116,7 +116,7 @@ $(document).ready(() => {
         if(leftImagesIndex>8){
             leftImagesIndex=0;
         }
-        let imagesWidth = [-265,-125,-185,-225,-265,-125,-185,-185,-225];
+        let imagesWidth = [-270,-190,-190,-230,-270,-130,-130,-190,-230];
         const $ul = $('.gallery ul').first();
         const ulTransition = $ul.css('transition');
         if (ulTransition && ulTransition !== 'none') {
@@ -140,9 +140,9 @@ $(document).ready(() => {
       
         setTimeout(()=>{
             $ul.css({
-                'transform': `translateX(${((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+5}px)`,
+                'transform': `translateX(${((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+10}px)`,
                 'transition': 'transform 0.5s ease-out'
-            }).data('translate-x', ((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+5);
+            }).data('translate-x', ((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+10);
             leftImagesIndex++;
             
         },1)
@@ -155,7 +155,7 @@ $(document).ready(() => {
         if(leftBottomImagesIndex>8){
             leftBottomImagesIndex=0;
         }   
-        let imagesBottomWidth = [-225,-125,-185,-265,-265,-125,-185,-185,-225];
+        let imagesBottomWidth = [-230,-130,-190,-270,-270,-130,-190,-190,-230];
         const $ulBottom = $('.bottom-gallery ul');
         const ulBottomTransition = $ulBottom.css('transition');
         if (ulBottomTransition && ulBottomTransition !== 'none') {
@@ -172,9 +172,9 @@ $(document).ready(() => {
         })
         setTimeout(()=>{
             $ulBottom.css({
-                'transform' : `translateX(${((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+5}px)`,
+                'transform' : `translateX(${((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+10}px)`,
                 'transition': 'transform 0.5s ease-out'
-            }).data('translate-x',((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+5)
+            }).data('translate-x',((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+10)
             leftBottomImagesIndex++;
         },1)
         setTimeout(()=>{

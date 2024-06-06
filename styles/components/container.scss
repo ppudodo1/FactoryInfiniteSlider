@@ -1,5 +1,5 @@
 .big-container {
-    max-width: $max-width;
+    max-width:1280px;
     display: flex;
     gap: $container-gap;
     margin-top: 2%;
@@ -11,10 +11,11 @@
 .small-container {
     display: flex;
     flex-direction: column;
+    gap: 7px;
     width: $small-container-width;
 }
   
-.bottom-container {
+.text-container {
     width: $bottom-container-width;
 }
   
@@ -22,10 +23,12 @@
     display: flex;
     justify-content: space-between;
 }
-  
+.text-container {
+    width: 35%;
+  }
 .title {
     font-size: $title-font-size;
-    max-width: 220px;
+    max-width: 300px;
     margin-top: 4px;
     margin-bottom: 4px;
     font-weight: bolder;
@@ -34,7 +37,7 @@
   
 .description {
     font-size: $description-font-size;
-    max-width: 220px;
+    max-width: 300px;
     color: $text-color;
 }
   

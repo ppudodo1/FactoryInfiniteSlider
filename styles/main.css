@@ -4,47 +4,47 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-header{
 
+header {
   display: flex;
   justify-content: space-between;
-
   max-width: 940px;
   border-radius: 5px;
   margin: 0 auto;
   width: 940px;
   height: 100px;
 }
-footer{
+
+footer {
   margin: 0 auto;
   max-width: 940px;
   width: 940px;
   background-color: #DDDDDD;
   border-radius: 5px;
-  
   height: 100px;
-
- 
 }
-.left-header-container{
+
+.left-header-container {
   background-color: #DDDDDD;
   height: 100%;
   width: 301px;
   border-radius: 5px;
 }
-.right-header-container{
+
+.right-header-container {
   background-color: #DDDDDD;
   height: 100%;
   width: 621px;
   border-radius: 5px;
 }
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -58,39 +58,33 @@ footer{
   width: 60px;
   background-color: #ffffff;
   border: none;
-  border: 0.5px solid #255282;
+  border: 0.5px solid #134880;
   border-radius: 5px;
 }
 .button-container button:hover {
   border: 0.5px solid #A1A1A1;
 }
-.gallery{
-  
+
+.gallery {
   width: 940px;
 }
+
 .gallery, .bottom-gallery {
   overflow: hidden;
- 
   margin-bottom: 4px;
 }
-.gallery ul{
- 
+.gallery ul, .bottom-gallery ul {
+  
   display: flex;
   flex-wrap: nowrap;
-  gap: 5px;
-  list-style: none;
-}
-.bottom-gallery ul {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 5px;
+  gap: 10px;
   list-style: none;
 }
 .gallery li, .bottom-gallery li {
-  height: 202px;
+  height: 200px;
 }
 .gallery img, .bottom-gallery img {
-  height: 200px;
+  height: 100%;
   border-radius: 5px;
 }
 
@@ -110,10 +104,11 @@ footer{
 }
 
 .big-container {
+  max-width: 1280px;
   display: flex;
   gap: 1rem;
+  margin-top: 2%;
   margin-left: 2px;
-  max-width: 1280px;
 }
 @media (max-width: 768px) {
   .big-container {
@@ -124,7 +119,8 @@ footer{
 .small-container {
   display: flex;
   flex-direction: column;
-  max-width: 940px;
+  gap: 7px;
+  width: 940px;
 }
 
 .text-container {
@@ -134,6 +130,10 @@ footer{
 .inner-container {
   display: flex;
   justify-content: space-between;
+}
+
+.text-container {
+  width: 35%;
 }
 
 .title {
