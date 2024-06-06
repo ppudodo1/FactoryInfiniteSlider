@@ -74,7 +74,6 @@ footer {
   margin-bottom: 4px;
 }
 .gallery ul, .bottom-gallery ul {
-  
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
