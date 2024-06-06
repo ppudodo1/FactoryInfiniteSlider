@@ -1,4 +1,4 @@
-.gallery, .second-gallery {
+.gallery, .bottom-gallery {
     overflow: hidden;
     margin-bottom: 4px;
     ul {
@@ -18,7 +18,7 @@
     }
   }
   
-  .second-gallery {
+  .bottom-gallery {
     transform: translateX(-100px);
   }
   

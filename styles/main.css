@@ -33,13 +33,13 @@ footer{
 
  
 }
-.first-header-container{
+.left-header-container{
   background-color: #DDDDDD;
   height: 100%;
   width: 301px;
   border-radius: 5px;
 }
-.second-header-container{
+.right-header-container{
   background-color: #DDDDDD;
   height: 100%;
   width: 621px;
@@ -68,7 +68,7 @@ footer{
   
   width: 940px;
 }
-.gallery, .second-gallery {
+.gallery, .bottom-gallery {
   overflow: hidden;
  
   margin-bottom: 4px;
@@ -80,21 +80,21 @@ footer{
   gap: 5px;
   list-style: none;
 }
-.second-gallery ul {
+.bottom-gallery ul {
   display: flex;
   flex-wrap: nowrap;
   gap: 5px;
   list-style: none;
 }
-.gallery li, .second-gallery li {
+.gallery li, .bottom-gallery li {
   height: 202px;
 }
-.gallery img, .second-gallery img {
+.gallery img, .bottom-gallery img {
   height: 200px;
   border-radius: 5px;
 }
 
-.second-gallery {
+.bottom-gallery {
   transform: translateX(-100px);
   width: 880px;
 }
@@ -110,17 +110,10 @@ footer{
 }
 
 .big-container {
-
   display: flex;
   gap: 1rem;
-
-
-
-  
   margin-left: 2px;
-  
   max-width: 1280px;
-  
 }
 @media (max-width: 768px) {
   .big-container {
@@ -134,7 +127,7 @@ footer{
   max-width: 940px;
 }
 
-.second-container {
+.text-container {
   width: 35%;
 }
 

@@ -52,7 +52,7 @@ $(document).ready(() => {
         }
 
         const $ul = $('.gallery ul').first();
-        const $secondGallery = $('.second-gallery');
+        const $secondGallery = $('.bottom-gallery');
         const $li = $(`<li><img src="${imagesArr[indexOfAnImage]}" alt=""></li>`);
         $ul.append($li);
 
@@ -79,7 +79,7 @@ $(document).ready(() => {
             mixedIndexOfAnImage = 0;
         }
 
-        const $secondUl = $('.second-gallery ul');
+        const $secondUl = $('.bottom-gallery ul');
         const $secondLi = $(`<li><img src="${mixedImagesArr[mixedIndexOfAnImage]}" alt=""></li>`);
         $secondUl.append($secondLi);
 
@@ -156,7 +156,7 @@ $(document).ready(() => {
             leftBottomImagesIndex=0;
         }   
         let imagesBottomWidth = [-225,-125,-185,-265,-265,-125,-185,-185,-225];
-        const $ulBottom = $('.second-gallery ul');
+        const $ulBottom = $('.bottom-gallery ul');
         const ulBottomTransition = $ulBottom.css('transition');
         if (ulBottomTransition && ulBottomTransition !== 'none') {
             $ulBottom.css('transition', 'none');
