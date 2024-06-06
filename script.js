@@ -102,50 +102,84 @@ $(document).ready(() => {
             mixedIndexOfAnImage++;
         });
     });
-
+   
+    let leftImagesIndex = 0;
+    let leftBottomImagesIndex = 0;
     $('#prev').on('click', () => {
         disableButtons();
-
-        if (indexOfAnImage > 0) {
+        if(indexOfAnImage>0){
             indexOfAnImage--;
         }
-
-        if (mixedIndexOfAnImage > 0) {
+        if(mixedIndexOfAnImage>0){
             mixedIndexOfAnImage--;
         }
-
+        if(leftImagesIndex>8){
+            leftImagesIndex=0;
+        }
+        let imagesWidth = [-265,-125,-185,-225,-265,-125,-185,-185,-225];
         const $ul = $('.gallery ul').first();
+        const ulTransition = $ul.css('transition');
+        if (ulTransition && ulTransition !== 'none') {
+            $ul.css('transition', 'none');
+        }
         const $lastLi = $ul.find('li:last');
+        const $firstLi = $ul.find('li:first');
         const lastLiWidth = $lastLi.width();
         let currentTranslateX = $ul.data('translate-x') || 0;
-        let newTranslateX = currentTranslateX + (lastLiWidth + 5);
-
-        if (newTranslateX <= 0) {
+        console.log("CurrentTranslate: ",currentTranslateX);
+        let newTranslateX = currentTranslateX + (lastLiWidth);
+        //console.log(culmImages)
+        const $li = $(`<li><img  src="${imagesArr[leftImagesIndex]}" alt=""></li>`);
+        $ul.prepend($li)
+        console.log("Sirina: ",$li.find('img').width())
+       
+        $ul.css({
+            'transform': `translateX(${currentTranslateX+imagesWidth[leftImagesIndex]}px)`,
+          
+        })
+      
+        setTimeout(()=>{
             $ul.css({
-                'transform': `translateX(${newTranslateX}px)`,
+                'transform': `translateX(${((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+5}px)`,
                 'transition': 'transform 0.5s ease-out'
-            }).data('translate-x', newTranslateX);
-
-            setTimeout(() => {
-                $lastLi.remove();
-            }, 500);
+            }).data('translate-x', ((currentTranslateX+imagesWidth[leftImagesIndex])+lastLiWidth)+5);
+            leftImagesIndex++;
+            
+        },1)
+        
+        setTimeout(()=>{
+            $lastLi.remove();
+          
+        },500)
+      
+        if(leftBottomImagesIndex>8){
+            leftBottomImagesIndex=0;
+        }   
+        let imagesBottomWidth = [-225,-125,-185,-265,-265,-125,-185,-185,-225];
+        const $ulBottom = $('.second-gallery ul');
+        const ulBottomTransition = $ulBottom.css('transition');
+        if (ulBottomTransition && ulBottomTransition !== 'none') {
+            $ulBottom.css('transition', 'none');
         }
+        const $lastBottomLi = $ulBottom.find('li:last');
+        const lastBottomLiWidth = $lastBottomLi.width();
+        let currentBottomTranslateX = $ulBottom.data('translate-x') || 0;
+        const $liBottom = $(`<li><img  src="${mixedImagesArr[leftBottomImagesIndex]}" alt=""></li>`);
+        $ulBottom.prepend($liBottom);
 
-        const $secondUl = $('.second-gallery ul');
-        const $secondLastLi = $secondUl.find('li:last');
-        const secondLastLiWidth = $secondLastLi.width();
-        let secondCurrentTranslateX = $secondUl.data('translate-x') || 0;
-        let newSecondTranslateX = secondCurrentTranslateX + (secondLastLiWidth + 5);
-
-        if (newSecondTranslateX <= 0) {
-            $secondUl.css({
-                'transform': `translateX(${newSecondTranslateX}px)`,
+        $ulBottom.css({
+            'transform' : `translateX(${currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex]}px)`,
+        })
+        setTimeout(()=>{
+            $ulBottom.css({
+                'transform' : `translateX(${((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+5}px)`,
                 'transition': 'transform 0.5s ease-out'
-            }).data('translate-x', newSecondTranslateX);
-
-            setTimeout(() => {
-                $secondLastLi.remove();
-            }, 500);
-        }
+            }).data('translate-x',((currentBottomTranslateX+imagesBottomWidth[leftBottomImagesIndex])+lastBottomLiWidth)+5)
+            leftBottomImagesIndex++;
+        },1)
+        setTimeout(()=>{
+            $lastBottomLi.remove();
+          
+        },500)
     });
 });
